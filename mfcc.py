@@ -1,4 +1,4 @@
-import numpy as npf
+import numpy as np
 import librosa
 
 def wav2mfcc(file_path, max_pad_len=11):

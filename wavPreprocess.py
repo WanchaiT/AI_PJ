@@ -8,7 +8,7 @@ import imageio
 from skimage import util
 
 
-filename = 'hello.wav'
+filename = "./data/79/79(3).wav"
 rate, audio = wavfile.read(filename)
 print(rate)
 audio = np.mean(audio, axis=1)
