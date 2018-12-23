@@ -23,6 +23,7 @@ def save_data_to_array(path=DATA_PATH, max_pad_len=130):
         print(wavfile)
 
     for label in labels:
+        print()
         print("--lable = ",label)
         # Init mfcc vectors
         mfcc_vectors = []

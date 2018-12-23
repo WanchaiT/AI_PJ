@@ -13,14 +13,14 @@ def get_train_test(split_ratio=0.6, random_state=42):
     y = np.zeros(X.shape[0])
 
     # Append all of the dataset into one single array, same goes for y
+    u=0
     for i, label in enumerate(labels[1:]):
         x = np.load(label + '.npy')
         X = np.vstack((X, x))
         y = np.append(y, np.full(x.shape[0], fill_value= (i + 1)))
+        u+=1
+        print("eqwfweqd" ,label)
 
     assert X.shape[0] == len(y)
 
     return train_test_split(X, y, test_size= (1 - split_ratio), random_state=random_state, shuffle=True)
-
-X_train, X_test, y_train, y_test = get_train_test()
-print(X_train.shape)
